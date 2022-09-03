@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) {
+        vector<vector<int>> ans;
+        if(m*n != original.size())
+            return ans;
+        int i=0;
+        for(int row=0; row<m; row++)
+        {
+            vector<int>temp;
+            for(int col=0; col<n; col++)
+            {
+                temp.push_back(original[i]);
+                i++;
+            }
+            ans.push_back(temp);
+        }
+        return ans;
+    }
+};
